@@ -1,0 +1,53 @@
+<div class="container">
+
+  <h1 class="main-title">
+    Spring Boot User Controller Frontend
+  </h1>
+
+  <div class="card">
+
+    <button class="btn blue-btn" (click)="getAllUsers()">
+      Get All Users
+    </button>
+
+    <h2>All Users</h2>
+
+    <pre>{{ allUsers | json }}</pre>
+
+  </div>
+
+  <div class="card">
+
+    <button class="btn green-btn" (click)="getSingleUser()">
+      Get Single User
+    </button>
+
+    <h2>Single User</h2>
+
+    <pre>{{ singleUser | json }}</pre>
+
+  </div>
+
+  <div class="button-group">
+
+    <button class="btn purple-btn" (click)="createUser()">
+      Create User
+    </button>
+
+    <button class="btn orange-btn" (click)="updateUser()">
+      Update User
+    </button>
+
+    <button class="btn red-btn" (click)="deleteUser()">
+      Delete User
+    </button>
+
+  </div>
+
+  <div class="message-box">
+
+    <h2>{{ message }}</h2>
+
+  </div>
+
+</div>
