@@ -55,22 +55,32 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
         http.
-                csrf()
+
+//                csrf()
+//                .disable()
+//                .authorizeHttpRequests()
+//                .antMatchers(PUBLIC_URLS)
+//                .permitAll()
+//                .antMatchers(HttpMethod.GET)
+//                .permitAll()
+//                .anyRequest()
+//                .authenticated()
+//                .and().exceptionHandling()
+//                .authenticationEntryPoint(this.jwtAuthenticationEntryPoint)
+//                .and()
+//                .sessionManagement()
+//                .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+
+        csrf()
                 .disable()
                 .authorizeHttpRequests()
-                .antMatchers(PUBLIC_URLS)
-                .permitAll()
-                .antMatchers(HttpMethod.GET)
-                .permitAll()
                 .anyRequest()
-                .authenticated()
-                .and().exceptionHandling()
-                .authenticationEntryPoint(this.jwtAuthenticationEntryPoint)
+                .permitAll()
                 .and()
                 .sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 
-        http.addFilterBefore(this.jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
+//        http.addFilterBefore(this.jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
 
         http.authenticationProvider(daoAuthenticationProvider());
         DefaultSecurityFilterChain defaultSecurityFilterChain = http.build();

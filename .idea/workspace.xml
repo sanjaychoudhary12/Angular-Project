@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5e828034-15f2-440e-b174-9f3cb5fb1a20" name="Changes" comment="angular and Spring Integration">
+    <list default="true" id="5e828034-15f2-440e-b174-9f3cb5fb1a20" name="Changes" comment="angular and Spring Integration (Integated Post Controlelr to angular frontend )">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NovaNode-Blogging-Application-main/src/main/java/com/codewithdurgesh/blog/controllers/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/NovaNode-Blogging-Application-main/src/main/java/com/codewithdurgesh/blog/controllers/PostController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NovaNode-Blogging-Application-main/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/NovaNode-Blogging-Application-main/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NovaNode-Blogging-Application-main/src/main/java/com/codewithdurgesh/blog/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/NovaNode-Blogging-Application-main/src/main/java/com/codewithdurgesh/blog/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-frontend/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/angular-frontend/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/angular-frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-frontend/src/app/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/angular-frontend/src/app/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/angular-frontend/src/app/app.html" beforeDir="false" afterPath="$PROJECT_DIR$/angular-frontend/src/app/app.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/angular-frontend/src/app/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular-frontend/src/app/app.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-frontend/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/angular-frontend/src/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,9 +40,13 @@
         </map>
       </branch-storage>
     </excluded-from-favorite>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="SYNC" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -45,12 +54,12 @@
     &quot;assignee&quot;: &quot;sanjaychoudhary12&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/sanjaychoudhary12/Angular-Project.git",
-    "accountId": "a398433f-1a26-4974-8508-8f90f782d140"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/sanjaychoudhary12/Angular-Project.git&quot;,
+    &quot;accountId&quot;: &quot;a398433f-1a26-4974-8508-8f90f782d140&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -65,13 +74,28 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "Spring Boot.BlogAppApisApplication.executor": "Run",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "child",
     "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/sanja/OneDrive/Desktop/Angluar Practice/NovaNode",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "ts.external.directory.path": "C:\\ADATA\\Angluar Practice\\NovaNode\\angular-frontend\\node_modules\\typescript\\lib"
   }
 }]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.24374.151" />
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.24374.151" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="5e828034-15f2-440e-b174-9f3cb5fb1a20" name="Changes" comment="" />
@@ -96,8 +120,19 @@
       <option name="project" value="LOCAL" />
       <updated>1779808861036</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="angular and Spring Integration (Integated Post Controlelr to angular frontend )">
+      <option name="closed" value="true" />
+      <created>1779811335563</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1779811335563</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.ts" />
@@ -119,6 +154,7 @@
       <path value="$PROJECT_DIR$/angular-frontend" />
     </ignored-roots>
     <MESSAGE value="angular and Spring Integration" />
-    <option name="LAST_COMMIT_MESSAGE" value="angular and Spring Integration" />
+    <MESSAGE value="angular and Spring Integration (Integated Post Controlelr to angular frontend )" />
+    <option name="LAST_COMMIT_MESSAGE" value="angular and Spring Integration (Integated Post Controlelr to angular frontend )" />
   </component>
 </project>
