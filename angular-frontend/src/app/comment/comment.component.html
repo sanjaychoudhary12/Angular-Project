@@ -1,0 +1,77 @@
+<section class="comment-card" id="comments">
+
+    <!-- HEADER -->
+
+    <div class="comment-header">
+
+        <div>
+
+            <h2>Comment Controller</h2>
+
+            <p>Create and Delete Comments</p>
+
+        </div>
+
+        <span class="comment-status">
+
+            ● LIVE
+
+        </span>
+
+    </div>
+
+    <!-- BODY -->
+
+    <div class="comment-body">
+
+        <!-- LEFT -->
+
+        <div class="comment-operation">
+
+            <h3>Operations</h3>
+
+            <div class="comment-buttons">
+
+                <button
+                class="comment-create-btn"
+                (click)="createComment()">
+
+                    ➕ Create Comment
+
+                </button>
+
+                <button
+                class="comment-delete-btn"
+                (click)="deleteComment()">
+
+                    🗑 Delete Comment
+
+                </button>
+
+            </div>
+
+            <div class="comment-message">
+
+                {{ commentMessage }}
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT -->
+
+        <div class="comment-response">
+
+            <h3>Created Comment</h3>
+
+            <div class="comment-response-box">
+
+                <pre>{{ createdComment | json }}</pre>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

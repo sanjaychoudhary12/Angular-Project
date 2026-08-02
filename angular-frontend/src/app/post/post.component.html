@@ -1,0 +1,191 @@
+<section class="api-card post-card" id="posts">
+
+    <div class="card-header">
+
+        <div class="header-left">
+
+            <h2>Post Controller</h2>
+
+            <p>Manage Posts & Images</p>
+
+        </div>
+
+        <div class="header-right">
+
+            <span class="api-status">
+
+                ● LIVE
+
+            </span>
+
+        </div>
+
+    </div>
+
+    <div class="controller-content">
+
+        <!-- LEFT -->
+
+        <div class="left-panel">
+
+            <div class="panel-title">
+
+                Post Operations
+
+            </div>
+
+            <div class="button-section">
+
+                <h4>CRUD Operations</h4>
+
+                <div class="action-buttons">
+
+                    <button
+                    class="create-btn"
+                    (click)="createPost()">
+
+                        ➕ Create
+
+                    </button>
+
+                    <button
+                    class="update-btn"
+                    (click)="updatePost()">
+
+                        ✏ Update
+
+                    </button>
+
+                    <button
+                    class="delete-btn"
+                    (click)="deletePost()">
+
+                        🗑 Delete
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="button-section">
+
+                <h4>Retrieve</h4>
+
+                <div class="action-buttons">
+
+                    <button
+                    class="secondary-btn"
+                    (click)="getAllPosts()">
+
+                        📋 All Posts
+
+                    </button>
+
+                    <button
+                    class="secondary-btn"
+                    (click)="getSinglePost()">
+
+                        🔍 Single Post
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="button-section">
+
+                <h4>Filter</h4>
+
+                <div class="action-buttons">
+
+                    <button
+                    class="secondary-btn"
+                    (click)="getPostsByUser()">
+
+                        👤 User Posts
+
+                    </button>
+
+                    <button
+                    class="secondary-btn"
+                    (click)="getPostsByCategory()">
+
+                        📂 Category Posts
+
+                    </button>
+
+                    <button
+                    class="secondary-btn"
+                    (click)="searchPost()">
+
+                        🔎 Search
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="button-section">
+
+                <h4>Image Upload</h4>
+
+                <div class="upload-box">
+
+                    <input
+                    type="file"
+                    (change)="uploadImage($event)">
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT -->
+
+        <div class="right-panel">
+
+            <div class="response-header">
+
+                API Responses
+
+            </div>
+
+            <div class="response-box">
+
+                <h4>All Posts</h4>
+
+                <pre>{{ allPosts | json }}</pre>
+
+                <h4>Single Post</h4>
+
+                <pre>{{ singlePost | json }}</pre>
+
+                <h4>User Posts</h4>
+
+                <pre>{{ userPosts | json }}</pre>
+
+                <h4>Category Posts</h4>
+
+                <pre>{{ categoryPosts | json }}</pre>
+
+                <h4>Search Result</h4>
+
+                <pre>{{ searchedPosts | json }}</pre>
+
+            </div>
+
+            <div class="message-area">
+
+                {{ message }}
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

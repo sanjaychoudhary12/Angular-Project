@@ -1,0 +1,137 @@
+<section class="category-card" id="categories">
+
+    <!-- HEADER -->
+
+    <div class="category-header">
+
+        <div>
+
+            <h2>Category Controller</h2>
+
+            <p>Manage Category APIs</p>
+
+        </div>
+
+        <span class="category-status">
+
+            ● LIVE
+
+        </span>
+
+    </div>
+
+    <!-- BODY -->
+
+    <div class="category-body">
+
+        <!-- LEFT -->
+
+        <div class="category-operation">
+
+            <h3>Category Operations</h3>
+
+            <!-- CRUD -->
+
+            <div class="category-button-group">
+
+                <button
+                class="category-create-btn"
+                (click)="createCategory()">
+
+                    ➕ Create
+
+                </button>
+
+                <button
+                class="category-update-btn"
+                (click)="updateCategory()">
+
+                    ✏ Update
+
+                </button>
+
+                <button
+                class="category-delete-btn"
+                (click)="deleteCategory()">
+
+                    🗑 Delete
+
+                </button>
+
+            </div>
+
+            <!-- GET -->
+
+            <div class="category-button-group">
+
+                <button
+                class="category-view-btn"
+                (click)="getAllCategories()">
+
+                    📋 All Categories
+
+                </button>
+
+                <button
+                class="category-view-btn"
+                (click)="getSingleCategory()">
+
+                    🔍 Single Category
+
+                </button>
+
+            </div>
+
+            <div class="category-message">
+
+                {{ categoryMessage }}
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT -->
+
+        <div class="category-table-panel">
+
+            <div class="category-section">
+
+                <h3>All Categories</h3>
+
+                <div class="category-table-box">
+
+                    <pre>{{ allCategories | json }}</pre>
+
+                </div>
+
+            </div>
+
+            <div class="category-section">
+
+                <h3>Selected Category</h3>
+
+                <div class="category-table-box">
+
+                    <pre>{{ singleCategory | json }}</pre>
+
+                </div>
+
+            </div>
+
+            <div class="category-section">
+
+                <h3>Created / Updated Category</h3>
+
+                <div class="category-table-box">
+
+                    <pre>{{ createdCategory | json }}</pre>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

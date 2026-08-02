@@ -1,0 +1,125 @@
+<section class="auth-card" id="auth">
+
+    <!-- HEADER -->
+
+    <div class="auth-header">
+
+        <div>
+
+            <h2>Authentication Controller</h2>
+
+            <p>Login, Register & User Authentication</p>
+
+        </div>
+
+        <span class="auth-status">
+
+            ● SECURED
+
+        </span>
+
+    </div>
+
+    <!-- BODY -->
+
+    <div class="auth-body">
+
+        <!-- LEFT -->
+
+        <div class="auth-login-panel">
+
+            <div class="auth-icon">
+
+                🔐
+
+            </div>
+
+            <h3>Authentication Center</h3>
+
+            <p>
+
+                Manage user authentication and access tokens.
+
+            </p>
+
+            <div class="auth-button-group">
+
+                <button
+                class="auth-login-btn"
+                (click)="login()">
+
+                    🔑 Login
+
+                </button>
+
+                <button
+                class="auth-register-btn"
+                (click)="registerUser()">
+
+                    👤 Register User
+
+                </button>
+
+                <button
+                class="auth-current-btn"
+                (click)="getCurrentUser()">
+
+                    🛡 Current User
+
+                </button>
+
+            </div>
+
+            <div class="auth-message">
+
+                {{ authMessage }}
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT -->
+
+        <div class="auth-response-panel">
+
+            <div class="auth-response-card">
+
+                <h3>Login Response</h3>
+
+                <div class="auth-response-box">
+
+                    <pre>{{ loginResponse | json }}</pre>
+
+                </div>
+
+            </div>
+
+            <div class="auth-response-card">
+
+                <h3>Registered User</h3>
+
+                <div class="auth-response-box">
+
+                    <pre>{{ registeredUser | json }}</pre>
+
+                </div>
+
+            </div>
+
+            <div class="auth-response-card">
+
+                <h3>Current User</h3>
+
+                <div class="auth-response-box">
+
+                    <pre>{{ currentUser | json }}</pre>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
