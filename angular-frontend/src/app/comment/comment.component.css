@@ -1,0 +1,157 @@
+/*==================================================
+    COMMENT CARD
+==================================================*/
+
+.comment-card{
+    margin-bottom:30px;
+}
+
+/*==================================================
+    HEADER
+==================================================*/
+
+.comment-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding-bottom:20px;
+    margin-bottom:30px;
+    border-bottom:1px solid rgba(255,255,255,.2);
+}
+
+.comment-header h2{
+    font-size:30px;
+    margin-bottom:8px;
+}
+
+.comment-header p{
+    color:#dbeafe;
+}
+
+/*==================================================
+    BODY
+==================================================*/
+
+.comment-body{
+    display:grid;
+    grid-template-columns:320px 1fr;
+    gap:30px;
+}
+
+/*==================================================
+    LEFT PANEL
+==================================================*/
+
+.comment-operation{
+    background:#3b82f6;
+    border-radius:18px;
+    padding:25px;
+    box-shadow:0 12px 25px rgba(0,0,0,.25);
+}
+
+.comment-operation h3{
+    font-size:22px;
+    margin-bottom:25px;
+}
+
+/*==================================================
+    BUTTONS
+==================================================*/
+
+.comment-buttons{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.comment-buttons button{
+    border:none;
+    padding:16px;
+    border-radius:12px;
+    cursor:pointer;
+    color:white;
+    font-size:16px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.comment-create-btn{
+    background:linear-gradient(90deg,#16a34a,#22c55e);
+}
+
+.comment-delete-btn{
+    background:linear-gradient(90deg,#dc2626,#ef4444);
+}
+
+.comment-buttons button:hover{
+    transform:translateY(-4px);
+    box-shadow:0 15px 25px rgba(0,0,0,.3);
+}
+
+/*==================================================
+    MESSAGE
+==================================================*/
+
+.comment-message{
+    margin-top:30px;
+    background:#1e40af;
+    padding:18px;
+    border-radius:12px;
+    min-height:80px;
+    font-weight:600;
+    color:white;
+}
+
+/*==================================================
+    RIGHT PANEL
+==================================================*/
+
+.comment-response{
+    background:#3b82f6;
+    border-radius:18px;
+    padding:25px;
+    box-shadow:0 12px 25px rgba(0,0,0,.25);
+}
+
+.comment-response h3{
+    margin-bottom:20px;
+    font-size:22px;
+}
+
+/*==================================================
+    RESPONSE BOX
+==================================================*/
+
+.comment-response-box{
+    background:#2e344b;
+    border:1px solid #475569;
+    border-radius:15px;
+    padding:20px;
+    min-height:350px;
+}
+
+.comment-response-box pre{
+    color:#e2e8f0;
+    white-space:pre-wrap;
+    word-wrap:break-word;
+    overflow:auto;
+    line-height:1.6;
+}
+
+/*==================================================
+    RESPONSIVE
+==================================================*/
+
+@media (max-width:850px){
+
+    .comment-body{
+        grid-template-columns:1fr;
+    }
+
+    .comment-header{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:15px;
+    }
+
+}

@@ -1,124 +1,87 @@
 <section class="auth-card" id="auth">
 
-    <!-- HEADER -->
+    <div class="dashboard">
 
-    <div class="auth-header">
+        <!-- Sidebar -->
+        <aside class="sidebar">
 
-        <div>
-
-            <h2>Authentication Controller</h2>
-
-            <p>Login, Register & User Authentication</p>
-
-        </div>
-
-        <span class="auth-status">
-
-            ● SECURED
-
-        </span>
-
-    </div>
-
-    <!-- BODY -->
-
-    <div class="auth-body">
-
-        <!-- LEFT -->
-
-        <div class="auth-login-panel">
-
-            <div class="auth-icon">
-
-                🔐
-
+            <div class="logo">
+                <h2>Authentication</h2>
+                <p>Manage authentication & access tokens</p>
             </div>
 
-            <h3>Authentication Center</h3>
-
-            <p>
-
-                Manage user authentication and access tokens.
-
-            </p>
-
-            <div class="auth-button-group">
-
-                <button
-                class="auth-login-btn"
+            <button
+                class="btn login"
                 (click)="login()">
+                🔑 Login
+            </button>
 
-                    🔑 Login
-
-                </button>
-
-                <button
-                class="auth-register-btn"
+            <button
+                class="btn register"
                 (click)="registerUser()">
+                👤 Register User
+            </button>
 
-                    👤 Register User
-
-                </button>
-
-                <button
-                class="auth-current-btn"
+            <button
+                class="btn current"
                 (click)="getCurrentUser()">
+                🛡 Current User
+            </button>
 
-                    🛡 Current User
+            <!-- Optional (only if logout() exists in TS)
+            <button
+                class="btn logout"
+                (click)="logout()">
+                🚪 Logout
+            </button> -->
 
-                </button>
-
-            </div>
-
+            <!-- Old auth message preserved -->
             <div class="auth-message">
-
                 {{ authMessage }}
-
             </div>
 
-        </div>
+        </aside>
 
-        <!-- RIGHT -->
+        <!-- Content -->
+        <main class="content">
 
-        <div class="auth-response-panel">
+            <section class="card">
 
-            <div class="auth-response-card">
-
-                <h3>Login Response</h3>
-
-                <div class="auth-response-box">
-
-                    <pre>{{ loginResponse | json }}</pre>
-
+                <div class="card-header">
+                    Login Response
                 </div>
 
-            </div>
+                <pre>
+{{ loginResponse | json }}
+                </pre>
 
-            <div class="auth-response-card">
+            </section>
 
-                <h3>Registered User</h3>
+            <section class="card">
 
-                <div class="auth-response-box">
-
-                    <pre>{{ registeredUser | json }}</pre>
-
+                <div class="card-header">
+                    Registered User
                 </div>
 
-            </div>
+                <pre>
+{{ registeredUser | json }}
+                </pre>
 
-            <div class="auth-response-card">
+            </section>
 
-                <h3>Current User</h3>
+            <section class="card">
 
-                <div class="auth-response-box">
-
-                    <pre>{{ currentUser | json }}</pre>
-
+                <div class="card-header">
+                    Current User
                 </div>
 
-            </div>
+                <pre>
+{{ currentUser | json }}
+                </pre>
 
-        </div>
+            </section>
+
+        </main>
 
     </div>
 

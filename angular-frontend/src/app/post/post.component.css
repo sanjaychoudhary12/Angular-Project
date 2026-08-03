@@ -1,0 +1,223 @@
+/*==================================================
+    POST CARD
+==================================================*/
+
+.api-card{
+    margin-bottom:30px;
+}
+
+/*==================================================
+    HEADER
+==================================================*/
+
+.card-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+    padding-bottom:20px;
+    border-bottom:1px solid rgba(255,255,255,.2);
+}
+
+.header-left h2{
+    font-size:30px;
+    margin-bottom:8px;
+}
+
+.header-left p{
+    color:#dbeafe;
+}
+
+/*==================================================
+    BODY
+==================================================*/
+
+.controller-content{
+    display:grid;
+    grid-template-columns:340px 1fr;
+    gap:30px;
+}
+
+/*==================================================
+    LEFT PANEL
+==================================================*/
+
+.left-panel{
+    background:#3b82f6;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 12px 25px rgba(0,0,0,.25);
+}
+
+.panel-title{
+    font-size:24px;
+    font-weight:bold;
+    margin-bottom:25px;
+}
+
+/*==================================================
+    BUTTON SECTIONS
+==================================================*/
+
+.button-section{
+    margin-bottom:30px;
+}
+
+.button-section h4{
+    margin-bottom:15px;
+    color:#dbeafe;
+}
+
+.action-buttons{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.action-buttons button{
+    border:none;
+    padding:16px;
+    border-radius:12px;
+    color:white;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.create-btn{
+    background:linear-gradient(90deg,#16a34a,#22c55e);
+}
+
+.update-btn{
+    background:linear-gradient(90deg,#2563eb,#3b82f6);
+}
+
+.delete-btn{
+    background:linear-gradient(90deg,#dc2626,#ef4444);
+}
+
+.secondary-btn{
+    background:linear-gradient(90deg,#4338ca,#6366f1);
+}
+
+.action-buttons button:hover{
+    transform:translateY(-4px);
+    box-shadow:0 15px 25px rgba(0,0,0,.3);
+}
+
+/*==================================================
+    FILE UPLOAD
+==================================================*/
+
+.upload-box{
+    background:#2e344b;
+    padding:20px;
+    border-radius:15px;
+    border:2px dashed #60a5fa;
+}
+
+.upload-box input{
+    width:100%;
+    color:white;
+    cursor:pointer;
+}
+
+.upload-box input::file-selector-button{
+    border:none;
+    background:#2563eb;
+    color:white;
+    padding:10px 18px;
+    border-radius:8px;
+    cursor:pointer;
+    margin-right:15px;
+}
+
+.upload-box input::file-selector-button:hover{
+    background:#1d4ed8;
+}
+
+/*==================================================
+    RIGHT PANEL
+==================================================*/
+
+.right-panel{
+    background:#3b82f6;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 12px 25px rgba(0,0,0,.25);
+}
+
+.response-header{
+    font-size:24px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+/*==================================================
+    RESPONSE BOX
+==================================================*/
+
+.response-box{
+    background:#2e344b;
+    border-radius:15px;
+    border:1px solid #475569;
+    padding:20px;
+    max-height:700px;
+    overflow:auto;
+}
+
+.response-box h4{
+    margin:20px 0 10px;
+    color:#93c5fd;
+}
+
+.response-box h4:first-child{
+    margin-top:0;
+}
+
+.response-box pre{
+    background:#1f2937;
+    color:#e2e8f0;
+    padding:15px;
+    border-radius:10px;
+    min-height:120px;
+    overflow:auto;
+    white-space:pre-wrap;
+    word-wrap:break-word;
+    margin-bottom:20px;
+    border:1px solid #374151;
+    line-height:1.6;
+}
+
+/*==================================================
+    MESSAGE
+==================================================*/
+
+.message-area{
+    margin-top:20px;
+    background:#1e40af;
+    padding:18px;
+    border-radius:12px;
+    font-weight:600;
+    color:white;
+    min-height:60px;
+}
+
+/*==================================================
+    RESPONSIVE
+==================================================*/
+
+@media (max-width:950px){
+
+    .controller-content{
+        grid-template-columns:1fr;
+    }
+
+    .card-header{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:15px;
+    }
+
+}

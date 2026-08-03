@@ -7,22 +7,14 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletResponse;
 
+import com.codewithdurgesh.blog.payloads.CreatePostDto;
 import org.hibernate.engine.jdbc.StreamUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.codewithdurgesh.blog.config.AppConstants;
@@ -48,11 +40,22 @@ public class PostController {
 	private String path;
 //	create
 
+//	@PostMapping("/user/{userId}/category/{categoryId}/posts")
+//	public ResponseEntity<PostDto> createPost(@RequestBody PostDto postDto, @PathVariable Integer userId,
+//			@PathVariable Integer categoryId) {
+//		PostDto createPost = this.postService.createPost(postDto, userId, categoryId);
+//		return new ResponseEntity<PostDto>(createPost, HttpStatus.CREATED);
+//	}
+
 	@PostMapping("/user/{userId}/category/{categoryId}/posts")
-	public ResponseEntity<PostDto> createPost(@RequestBody PostDto postDto, @PathVariable Integer userId,
+	public ResponseEntity<PostDto> createPost(
+			@RequestBody CreatePostDto postDto,
+			@PathVariable Integer userId,
 			@PathVariable Integer categoryId) {
+
 		PostDto createPost = this.postService.createPost(postDto, userId, categoryId);
-		return new ResponseEntity<PostDto>(createPost, HttpStatus.CREATED);
+
+		return new ResponseEntity<>(createPost, HttpStatus.CREATED);
 	}
 
 	// get by user
@@ -124,9 +127,16 @@ public class PostController {
 
 	// post image upload
 
-	@PostMapping("/post/image/upload/{postId}")
-	public ResponseEntity<PostDto> uploadPostImage(@RequestParam("image") MultipartFile image,
-			@PathVariable Integer postId) throws IOException {
+//	@PostMapping("/post/image/upload/{postId}")
+//	public ResponseEntity<PostDto> uploadPostImage(@RequestParam("image") MultipartFile image,
+//			@PathVariable Integer postId) throws IOException
+@PostMapping(
+		value = "/post/image/upload/{postId}",
+		consumes = MediaType.MULTIPART_FORM_DATA_VALUE
+)
+public ResponseEntity<PostDto> uploadPostImage(
+		@RequestParam("image") MultipartFile image,
+		@PathVariable Integer postId) throws IOException		{
 
 		PostDto postDto = this.postService.getPostById(postId);
 		

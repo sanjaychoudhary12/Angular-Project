@@ -3,13 +3,10 @@
     <div class="card-header">
 
         <div class="header-left">
-            <h2>User Controller</h2>
+
+            <h2>User Profile</h2>
+
             <p>Create, Update and Manage Users</p>
-        </div>
-
-        <div class="header-right">
-
-            <span class="api-status">● LIVE</span>
 
         </div>
 
@@ -22,7 +19,9 @@
         <div class="left-panel">
 
             <div class="panel-title">
+
                 User Details
+
             </div>
 
             <div class="form-grid">
@@ -32,9 +31,9 @@
                     <label>Name</label>
 
                     <input
-                    type="text"
-                    placeholder="Enter Name"
-                    [(ngModel)]="userName">
+                        type="text"
+                        placeholder="Enter Name"
+                        [(ngModel)]="userName">
 
                 </div>
 
@@ -43,9 +42,9 @@
                     <label>Email</label>
 
                     <input
-                    type="email"
-                    placeholder="Enter Email"
-                    [(ngModel)]="userEmail">
+                        type="email"
+                        placeholder="Enter Email"
+                        [(ngModel)]="userEmail">
 
                 </div>
 
@@ -54,9 +53,9 @@
                     <label>Password</label>
 
                     <input
-                    type="password"
-                    placeholder="Password"
-                    [(ngModel)]="userPassword">
+                        type="password"
+                        placeholder="Password"
+                        [(ngModel)]="userPassword">
 
                 </div>
 
@@ -65,9 +64,9 @@
                     <label>About</label>
 
                     <textarea
-                    rows="4"
-                    placeholder="About User"
-                    [(ngModel)]="userAbout"></textarea>
+                        rows="4"
+                        placeholder="About User"
+                        [(ngModel)]="userAbout"></textarea>
 
                 </div>
 
@@ -79,22 +78,25 @@
 
                 <div class="action-buttons">
 
-                    <button class="create-btn"
-                    (click)="createUser()">
+                    <button
+                        class="create-btn"
+                        (click)="createUser()">
 
                         ➕ Create
 
                     </button>
 
-                    <button class="update-btn"
-                    (click)="updateUser()">
+                    <button
+                        class="update-btn"
+                        (click)="updateUser()">
 
                         ✏ Update
 
                     </button>
 
-                    <button class="delete-btn"
-                    (click)="deleteUser()">
+                    <button
+                        class="delete-btn"
+                        (click)="deleteUser()">
 
                         🗑 Delete
 
@@ -111,16 +113,16 @@
                 <div class="action-buttons">
 
                     <button
-                    class="secondary-btn"
-                    (click)="getAllUsers()">
+                        class="secondary-btn"
+                        (click)="getAllUsers()">
 
                         📋 Get All
 
                     </button>
 
                     <button
-                    class="secondary-btn"
-                    (click)="getSingleUser()">
+                        class="secondary-btn"
+                        (click)="getSingleUser()">
 
                         🔍 Get User
 

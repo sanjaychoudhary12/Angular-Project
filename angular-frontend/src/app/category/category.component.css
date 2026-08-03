@@ -1,0 +1,173 @@
+/*==================================================
+    CATEGORY CARD
+==================================================*/
+
+.category-card{
+    margin-bottom:30px;
+}
+
+/*==================================================
+    HEADER
+==================================================*/
+
+.category-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+    border-bottom:1px solid rgba(255,255,255,.2);
+    padding-bottom:20px;
+}
+
+.category-header h2{
+    font-size:30px;
+    margin-bottom:8px;
+}
+
+.category-header p{
+    color:#dbeafe;
+    font-size:16px;
+}
+
+/*==================================================
+    BODY
+==================================================*/
+
+.category-body{
+    display:grid;
+    grid-template-columns:320px 1fr;
+    gap:30px;
+}
+
+/*==================================================
+    LEFT PANEL
+==================================================*/
+
+.category-operation{
+    background:#3b82f6;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 12px 25px rgba(0,0,0,.25);
+}
+
+.category-operation h3{
+    margin-bottom:25px;
+    font-size:22px;
+}
+
+/*==================================================
+    BUTTONS
+==================================================*/
+
+.category-button-group{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    margin-bottom:25px;
+}
+
+.category-button-group button{
+    border:none;
+    padding:16px;
+    border-radius:12px;
+    cursor:pointer;
+    color:white;
+    font-size:16px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.category-create-btn{
+    background:linear-gradient(90deg,#16a34a,#22c55e);
+}
+
+.category-update-btn{
+    background:linear-gradient(90deg,#2563eb,#3b82f6);
+}
+
+.category-delete-btn{
+    background:linear-gradient(90deg,#dc2626,#ef4444);
+}
+
+.category-view-btn{
+    background:linear-gradient(90deg,#4338ca,#6366f1);
+}
+
+.category-button-group button:hover{
+    transform:translateY(-4px);
+    box-shadow:0 15px 25px rgba(0,0,0,.3);
+}
+
+/*==================================================
+    MESSAGE
+==================================================*/
+
+.category-message{
+    margin-top:20px;
+    padding:18px;
+    border-radius:12px;
+    background:#1e40af;
+    color:white;
+    font-weight:600;
+    min-height:70px;
+}
+
+/*==================================================
+    RIGHT PANEL
+==================================================*/
+
+.category-table-panel{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+.category-section{
+    background:#3b82f6;
+    border-radius:18px;
+    padding:22px;
+    box-shadow:0 12px 25px rgba(0,0,0,.25);
+}
+
+.category-section h3{
+    margin-bottom:18px;
+    font-size:21px;
+}
+
+/*==================================================
+    RESPONSE BOX
+==================================================*/
+
+.category-table-box{
+    background:#2e344b;
+    border:1px solid #475569;
+    border-radius:15px;
+    padding:20px;
+    min-height:180px;
+}
+
+.category-table-box pre{
+    color:#e2e8f0;
+    white-space:pre-wrap;
+    word-wrap:break-word;
+    overflow:auto;
+    line-height:1.6;
+}
+
+/*==================================================
+    RESPONSIVE
+==================================================*/
+
+@media (max-width:900px){
+
+    .category-body{
+        grid-template-columns:1fr;
+    }
+
+    .category-header{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:15px;
+    }
+
+}

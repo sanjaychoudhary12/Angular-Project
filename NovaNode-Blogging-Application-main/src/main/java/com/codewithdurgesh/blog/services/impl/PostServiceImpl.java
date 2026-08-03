@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import com.codewithdurgesh.blog.payloads.CreatePostDto;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -39,7 +40,10 @@ public class PostServiceImpl implements PostService {
     private CategoryRepo categoryRepo;
 
     @Override
-    public PostDto createPost(PostDto postDto, Integer userId, Integer categoryId) {
+//    public PostDto createPost(PostDto postDto, Integer userId, Integer categoryId)
+    public PostDto createPost(CreatePostDto postDto,
+                              Integer userId,
+                              Integer categoryId)   {
 
         User user = this.userRepo.findById(userId)
                 .orElseThrow(() -> new ResourceNotFoundException("User ", "User id", userId));

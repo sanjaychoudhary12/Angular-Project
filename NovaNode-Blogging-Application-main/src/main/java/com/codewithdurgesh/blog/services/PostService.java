@@ -3,6 +3,7 @@ package com.codewithdurgesh.blog.services;
 import java.util.List;
 
 import com.codewithdurgesh.blog.entities.Post;
+import com.codewithdurgesh.blog.payloads.CreatePostDto;
 import com.codewithdurgesh.blog.payloads.PostDto;
 import com.codewithdurgesh.blog.payloads.PostResponse;
 
@@ -10,8 +11,8 @@ public interface PostService {
 
 	//create 
 
-	PostDto createPost(PostDto postDto,Integer userId,Integer categoryId);
-
+//	PostDto createPost(PostDto postDto,Integer userId,Integer categoryId);
+PostDto createPost(CreatePostDto postDto, Integer userId, Integer categoryId);
 	//update 
 
 	PostDto updatePost(PostDto postDto, Integer postId);
