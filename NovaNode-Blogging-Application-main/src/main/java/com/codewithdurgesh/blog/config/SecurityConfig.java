@@ -7,12 +7,10 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
-import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -22,17 +20,13 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
-import org.springframework.web.servlet.config.annotation.CorsRegistry;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-
 import com.codewithdurgesh.blog.security.CustomUserDetailService;
 import com.codewithdurgesh.blog.security.JwtAuthenticationEntryPoint;
 import com.codewithdurgesh.blog.security.JwtAuthenticationFilter;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
 
 @Configuration
 @EnableWebSecurity
-@EnableWebMvc
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SecurityConfig {
 
@@ -55,32 +49,33 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
         http.
-
-//                csrf()
-//                .disable()
-//                .authorizeHttpRequests()
-//                .antMatchers(PUBLIC_URLS)
-//                .permitAll()
-//                .antMatchers(HttpMethod.GET)
-//                .permitAll()
-//                .anyRequest()
-//                .authenticated()
-//                .and().exceptionHandling()
-//                .authenticationEntryPoint(this.jwtAuthenticationEntryPoint)
-//                .and()
-//                .sessionManagement()
-//                .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
-
-        csrf()
+                csrf()
                 .disable()
                 .authorizeHttpRequests()
-                .anyRequest()
+                .antMatchers(PUBLIC_URLS)
                 .permitAll()
+                .antMatchers(HttpMethod.GET)
+                .permitAll()
+                .anyRequest()
+                .authenticated()
+                .and().exceptionHandling()
+                .authenticationEntryPoint(this.jwtAuthenticationEntryPoint)
                 .and()
                 .sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 
-//        http.addFilterBefore(this.jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
+
+                //to keep jwt off use this
+//        csrf()
+//                .disable()
+//                .authorizeHttpRequests()
+//                .anyRequest()
+//                .permitAll()
+//                .and()
+//                .sessionManagement()
+//                .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+
+        http.addFilterBefore(this.jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
 
         http.authenticationProvider(daoAuthenticationProvider());
         DefaultSecurityFilterChain defaultSecurityFilterChain = http.build();
@@ -159,7 +154,7 @@ public class SecurityConfig {
 
 
     @Bean
-    public FilterRegistrationBean coresFilter() {
+    public FilterRegistrationBean corsFilter() {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
 
         CorsConfiguration corsConfiguration = new CorsConfiguration();
@@ -181,20 +176,20 @@ public class SecurityConfig {
         return bean;
     }
 
-    @Bean
-    public WebMvcConfigurer corsConfigurer() {
-
-        return new WebMvcConfigurer() {
-
-            @Override
-            public void addCorsMappings(CorsRegistry registry) {
-
-                registry.addMapping("/**")
-                        .allowedOrigins("http://localhost:4200")
-                        .allowedMethods("*")
-                        .allowedHeaders("*");
-            }
-        };
-    }
+//    @Bean
+//    public WebMvcConfigurer corsConfigurer() {
+//
+//        return new WebMvcConfigurer() {
+//
+//            @Override
+//            public void addCorsMappings(CorsRegistry registry) {
+//
+//                registry.addMapping("/**")
+//                        .allowedOrigins("http://localhost:4200")
+//                        .allowedMethods("*")
+//                        .allowedHeaders("*");
+//            }
+//        };
+//    }
 
 }
