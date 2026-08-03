@@ -7,13 +7,8 @@
     <list default="true" id="5e828034-15f2-440e-b174-9f3cb5fb1a20" name="Changes" comment="angular and Spring Integration (Integated Post Controlelr to angular frontend )">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NovaNode-Blogging-Application-main/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/NovaNode-Blogging-Application-main/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NovaNode-Blogging-Application-main/src/main/java/com/codewithdurgesh/blog/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/NovaNode-Blogging-Application-main/src/main/java/com/codewithdurgesh/blog/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-frontend/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/angular-frontend/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/angular-frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-frontend/src/app/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/angular-frontend/src/app/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-frontend/src/app/app.html" beforeDir="false" afterPath="$PROJECT_DIR$/angular-frontend/src/app/app.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-frontend/src/app/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular-frontend/src/app/app.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-frontend/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/angular-frontend/src/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NovaNode-Blogging-Application-main/src/main/java/com/codewithdurgesh/blog/config/SwagggerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/NovaNode-Blogging-Application-main/src/main/java/com/codewithdurgesh/blog/config/SwaggerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NovaNode-Blogging-Application-main/src/main/java/com/codewithdurgesh/blog/payloads/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/NovaNode-Blogging-Application-main/src/main/java/com/codewithdurgesh/blog/payloads/UserDto.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +74,7 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "Spring Boot.BlogAppApisApplication.executor": "Run",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "child",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/sanja/OneDrive/Desktop/Angluar Practice/NovaNode",

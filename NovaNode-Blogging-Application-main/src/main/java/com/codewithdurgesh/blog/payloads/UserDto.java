@@ -13,6 +13,7 @@ import com.codewithdurgesh.blog.entities.Role;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -20,6 +21,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @Setter
 @Getter
+@JsonPropertyOrder({"id", "name", "email", "password", "about", "roles"})
 public class UserDto {
 
 	private int id;
@@ -34,8 +36,6 @@ public class UserDto {
 
 	@NotEmpty
 	@Size(min = 3, max = 10, message = "Password must be min of 3 chars and max of 10 chars !!")
-
-
 	private String password;
 
 	@NotEmpty
